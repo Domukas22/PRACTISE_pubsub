@@ -6,6 +6,18 @@
     --green_main: rgb(92 220 92);;
 }
 
+main {
+    width: 80%;
+    max-width: 900px;
+    display: grid;
+    gap: 14px;
+    padding: 4px;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    justify-content: center;
+
+  }
+
 .user,
 .user * {
     color: white;
@@ -15,7 +27,6 @@
 .user {
     background-color: #3f3f3f;
     border-radius: 8px;
-    height: 300px;
 }
 .user_top {
     display: flex;
@@ -70,26 +81,29 @@
     object-fit: cover;
 }
 .wrap_notifcations {
-    display: grid;
-    grid-template: 1fr / auto;
-    grid-template-rows: auto;
-    row-gap: 8px;
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
 
     overflow-y: auto;
 }
 
 
-.user_noti {
-    display: flex;
-    background-color: rgb(73, 73, 73);
-    padding: 10px;
-}
+
 .user_noti:hover > .user_notification_right > .user_btn {
     opacity: 1;
 }
 .user_noti_left {
     flex: 1;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+.user_noti {
+    display: flex;
+    background-color: rgb(73, 73, 73);
+    padding: 10px 10px 10px 14px;
+    margin-bottom: 8px; 
 }
 .user_noti_title {
     font-size: 0.9rem;

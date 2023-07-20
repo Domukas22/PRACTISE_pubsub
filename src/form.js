@@ -11,14 +11,12 @@ export const Form = (() => {
     const render_eventForm = (target_container) => {
         renderForm(target_container, 'event', (e) => publish(e, 'event'));
     };
-
     const renderForm = (target_container, templateClass, publishCallback) => {
       let template = document.querySelector(`.template_form.${templateClass}`);
       let form = template.content.cloneNode(true);
       form.querySelector('button').addEventListener('click', publishCallback);
       target_container.appendChild(form);
     };
-  
     const publish = (e, type) => {
         e.preventDefault();
         let input = e.currentTarget.parentElement.querySelector('input[type="text"]');
@@ -28,8 +26,5 @@ export const Form = (() => {
         input.value = '';
       };
   
-    return {
-      render_restaurantForm,
-      render_eventForm,
-    };
+    return {render_restaurantForm, render_eventForm};
 })();

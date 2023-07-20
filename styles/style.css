@@ -5,6 +5,7 @@
     padding: 0px;
 
     transition: 150ms;
+    text-decoration: none;
 }
 html {
     padding: 0;
@@ -13,14 +14,17 @@ html {
     font-size: 14px;
 }
 body {
-    display: flex;
     background-color: rgb(50, 50, 50);
-    margin: 2px;
+    padding: 4vmin;
+    padding-top: 40px;
+
     height: 98vh;
     
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 button {
     border: none;
 }
+

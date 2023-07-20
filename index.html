@@ -4,31 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRACTISE_pubsub</title>
+    <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/left.css">
     <link rel="stylesheet" href="./styles/right.css">
 </head>
 <body>
-    <aside style="width: 300px;"></aside>
-    <main style="width: 450px; margin-left: 40px;"></main>
+    <aside></aside>
+    <main></main>
 
     <script src="/src/index.js" type="module"></script>
 
     <template class="template_form restaurant">
         <form class="form_publish">
-            <label for="input_restaurant">Create a new restaurant</label>
-            <input type="text" name="restaurant" id="input_restaurant" placeholder="New restaurant...">
-            <button>Publish restaurant</button>
+            <label for="input_restaurant">New restaurant</label>
+            <input type="text" name="restaurant" id="input_restaurant" placeholder="Restaurant name..." autocomplete="off">
+            <button>Publish</button>
         </form>
     </template>
 
     <template class="template_form event">
         <form class="form_publish">
-            <label for="input_event">Create a new event</label>
-            <input type="text" name="event" id="input_event" placeholder="New event...">
-            <button>Publish event</button>
+            <label for="input_event">New event</label>
+            <input type="text" name="event" id="input_event" placeholder="Event name..." autocomplete="off">
+            <button>Publish</button>
         </form>
     </template>
+
+    <template class="template_li_inAll">
+        <li class="li_inAll">
+            <span class="title_inAll"></span>
+            <span class="time_inAll"></span>
+        </li>
+    </template>
+
+    
 
     <template class="template_user">
         <div class="user" data-id="">
